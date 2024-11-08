@@ -4,6 +4,8 @@ import psycopg2
 import faiss
 import PyPDF2
 from groq import Groq
+from dotenv import load_dotenv
+load_dotenv()
 
 # Load the embedding and cross-encoder re-ranking models
 embedding_model = SentenceTransformer('all-mpnet-base-v2')  # Switch to a larger, more accurate model
@@ -118,9 +120,7 @@ def semantic_search(query, top_k=10, threshold=0.8, rerank_top_k=3):
     return final_results
 
 def generate_llm_response(query, rag_results):
-    client = Groq(
-        api_key="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"  # Replace with your actual Groq API key
-    )
+    client = Groq()
     
     # Construct context from RAG results
     context = "\n".join([content for content, _ in rag_results])
