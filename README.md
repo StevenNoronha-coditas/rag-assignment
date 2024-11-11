@@ -1,4 +1,4 @@
-#Assignment: Build a Simple RAG System
+# Assignment: Build a Simple RAG System
 
 1) Objective: Implement a basic Retrieval-Augmented Generation system that takes a user query, retrieves relevant information from a small knowledge base, and generates a response.
 2) Instructions:
