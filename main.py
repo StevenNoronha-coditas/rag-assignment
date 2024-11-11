@@ -1,9 +1,9 @@
-from knowledge_extractor import extract_text_from_pdf
-from db_operations import store_embeddings, semantic_search
-from llm_call import generate_llm_response
+from utilities.knowledge_extractor import extract_text_from_pdf
+from utilities.db_operations import store_embeddings, semantic_search
+from utilities.llm_call import generate_llm_response
 
 def main():
-    chunks = extract_text_from_pdf('knowledge.pdf')
+    chunks = extract_text_from_pdf('utilities/knowledge.pdf')
     
     store_embeddings(chunks)
     

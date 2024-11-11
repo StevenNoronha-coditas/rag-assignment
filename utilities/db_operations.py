@@ -1,7 +1,7 @@
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import os
 from dotenv import load_dotenv
-from pydantic_files import RAGResult
+from utilities.pydantic_files import RAGResult
 import psycopg2
 load_dotenv()
 

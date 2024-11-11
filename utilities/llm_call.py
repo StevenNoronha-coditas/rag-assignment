@@ -1,4 +1,4 @@
-from pydantic_files import LLMResponse
+from utilities.pydantic_files import LLMResponse
 from groq import Groq
 
 def generate_llm_response(query, rag_results):
